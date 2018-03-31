@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/rlBaseRoot"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rlToobar"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:background="@color/bgWhite">
+
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="126px"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingBottom="28px"
+            android:paddingLeft="30px"
+            android:paddingRight="75px"
+            android:paddingTop="28px"
+            android:src="@mipmap/arrow_left"/>
+
+        <TextView
+            android:id="@+id/tvLeftTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="30px"
+            android:text="左标题"
+            android:textColor="#fff"
+            android:textSize="54px"
+            android:visibility="gone"
+            />
+
+
+        <TextView
+            android:id="@+id/tvCenterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="中标题"
+            android:textColor="@color/textBlack"
+            android:textSize="36px"/>
+
+
+        <TextView
+            android:id="@+id/tvRightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="30px"
+            android:text="右标题"
+            android:textColor="#fff"
+            android:textSize="32px"
+            android:visibility="gone"
+            />
+
+
+        <ImageView
+            android:id="@+id/ivRight"
+            android:layout_width="97px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="28px"
+            android:paddingLeft="30px"
+            android:paddingRight="30px"
+            android:paddingTop="28px"
+            android:src="@mipmap/ic_launcher_round"
+            android:visibility="gone"
+            />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+    <com.zhy.autolayout.AutoFrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"/>
+
+
+</LinearLayout>

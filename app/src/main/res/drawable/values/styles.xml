@@ -1,0 +1,95 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/themeWhiteBg</item>
+    </style>
+
+    <!--滑动退出主题-->
+    <style name="SwipeTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/SwipeBackAnim</item>
+    </style>
+
+
+    <!--滑动退出动画-->
+    <style name="SwipeBackAnim" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right
+        </item>     <!--a -> b  b anim-->
+        <item name="android:activityOpenExitAnimation">@null
+        </item>                     <!--a -> b   a anim-->
+        <item name="android:activityCloseEnterAnimation">@null
+        </item>                    <!--b -> a  a anim-->
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right
+        </item>    <!--b -> a  b anim-->
+        <item name="android:taskOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@anim/slide_out_right</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="SwipeBackLayout">
+        <item name="edge_size">50dip</item>
+        <item name="shadow_left">@drawable/shadow_left</item>
+        <item name="shadow_right">@drawable/shadow_right</item>
+        <item name="shadow_bottom">@drawable/shadow_bottom</item>
+    </style>
+
+
+    <style name="TabTextStyle">
+        <item name="android:textColor">@color/textMain</item>
+    </style>
+
+
+    <!--水平分割线-aster-->
+    <style name="splitLineGrayHor">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/lineGray</item>
+    </style>
+
+    <!--垂直分割线-aster-->
+    <style name="splitLineGrayVer">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/lineGray</item>
+    </style>
+
+    <!--tablayout文字字体大小-->
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--底部弹出的dialog样式-->
+    <style name="BottomDialog" parent="@style/AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--收藏弹出的dialog样式:无背景-->
+    <style name="CollectDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item><!-- 设置不显示标题 -->
+        <item name="android:backgroundDimEnabled">false</item><!--dim:模糊的背景阴影效果-->
+
+    </style>
+
+    <!--全屏背景半透明：系统默认窗体背景半透明，只要将原有布局的背景透明就可以了-->
+    <style name="TranslucenceBackground" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/translucent</item><!--通过该属性控制,将原有布局背景透明-->
+        <item name="android:windowNoTitle">true</item><!-- 设置不显示标题 -->
+        <!--<item name="android:backgroundDimEnabled">false</item>&lt;!&ndash;dim:模糊的背景阴影效果  &ndash;&gt;-->
+        <!--<item name="android:windowIsTranslucent">false</item>&lt;!&ndash;背景是否半透明&ndash;&gt;-->
+    </style>
+
+</resources>

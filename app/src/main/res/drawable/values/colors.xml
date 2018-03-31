@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/bgGray</color>
+    <color name="colorPrimaryDark">@color/bgGray</color>
+    <color name="colorAccent">@color/bgBlack</color>
+
+    <!--App主颜色-->
+    <color name="appColor">@color/bgWhite</color>
+    <color name="appSecondaryColor">#fd7801</color>
+
+    <!--界面背景色-->
+    <color name="bgGray">#f1f1f1</color>
+    <color name="bgWhite">#FFFFFF</color>
+    <color name="bgBlack">#000000</color>
+    <color name="transparent">#00f5f2f7</color>
+    <color name="translucent">#2e060606</color>
+    <color name="translucentLowSpacity">#9c0a0a0a</color><!--低透明度-->
+
+    <!--文本颜色-->
+    <color name="textWhite">#ffffff</color>
+    <color name="textBlack">#000000</color>
+    <color name="textMain">#333333</color>
+    <color name="textMinor">#666666</color>
+    <color name="textLesser">#999999</color>
+    <color name="textHint">@color/textLesser</color>
+
+    <!--分割线颜色-->
+    <color name="splitLineGray">#eeeeee</color>
+
+    <!--背景色调-aster-->
+    <color name="themeGrayBg">#f1f1f1</color>
+    <color name="themeWhiteBg">#ffffff</color>
+    <color name="themeTransparentBg">#00f5f2f7</color>
+    <color name="themeOrange">#fd7801</color>
+    <color name="themeRedLow">#fcebee</color>
+    <color name="themeBlueLow">#ecf5ff</color>
+    <color name="themeGrayBlue">#ebeefc</color>
+
+    <!--文字颜色-aster-->
+    <!--<color name="textWrite">#ffffff</color>-->
+    <!--<color name="textBlack">#333333</color>-->
+    <color name="textOrange">#fd7801</color>
+    <color name="textGrayDeep">#666666</color>
+    <color name="textGrayLow">#999999</color>
+    <color name="textBule">#2064b2</color>
+    <color name="textRed">#e6746a</color>
+    <color name="textRedDeep">#eb3F2F</color>
+    <color name="textPurple">#67a7ed</color>
+    <color name="textBlueGray">#7695e9</color>
+
+    <!--线条颜色-aster-->
+    <color name="lineGray">#eeeeee</color>
+    <color name="lineOrange">#fd7801</color>
+
+</resources>
