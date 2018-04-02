@@ -1,4 +1,4 @@
-package cn.com.tianyudg.rxretrofitmvpdemo.basic.view;
+package cn.com.tianyudg.rxretrofitmvpdemo.view;
 
 
 import android.content.DialogInterface;

@@ -13,12 +13,6 @@ public interface MvpView {
 
 
     /**
-     * @return 布局resourceId
-     */
-    int getViewLayout();
-
-
-    /**
      * 开始加载数据时回调此方法，用以显示加载ProgressDialog或者其他的的操作
      */
     void onLoading();

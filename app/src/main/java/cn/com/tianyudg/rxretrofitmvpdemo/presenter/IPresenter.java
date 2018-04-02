@@ -24,4 +24,8 @@ public interface IPresenter<V extends IView, M extends IModel> {
     V getView();
 
     M getModel();
+
+    boolean isViewAttach();
+
+    boolean isModelAttach();
 }

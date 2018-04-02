@@ -33,6 +33,7 @@ public class BasePresenter<V extends IView, M extends IModel> implements IPresen
 
     @Override
     public void detachVM() {
+        if (viewHolder == null || modelHolder == null) return;
         viewHolder.clear();
         modelHolder.clear();
         onDesytroy();
@@ -45,11 +46,23 @@ public class BasePresenter<V extends IView, M extends IModel> implements IPresen
 
     @Override
     public V getView() {
+        if (viewHolder == null) return null;
         return viewHolder.get();
     }
 
     @Override
     public M getModel() {
+        if (viewHolder == null) return null;
         return modelHolder.get();
+    }
+
+    @Override
+    public boolean isViewAttach() {
+        return viewHolder != null && viewHolder.get() != null;
+    }
+
+    @Override
+    public boolean isModelAttach() {
+        return modelHolder != null && modelHolder.get() != null;
     }
 }
