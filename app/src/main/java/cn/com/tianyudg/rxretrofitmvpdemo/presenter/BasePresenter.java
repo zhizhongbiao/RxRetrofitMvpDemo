@@ -19,8 +19,8 @@ public class BasePresenter<V extends IView, M extends IModel> implements IPresen
 
     @Override
     public void attachVM(V v, M m) {
-        MyUtil.checkNotNull(v);
-        MyUtil.checkNotNull(m);
+        MyUtil.checkNotNull(v,"v can not be null");
+        MyUtil.checkNotNull(m,"v can not be null");
         viewHolder = new WeakReference<V>(v);
         modelHolder = new WeakReference<M>(m);
         onStart();

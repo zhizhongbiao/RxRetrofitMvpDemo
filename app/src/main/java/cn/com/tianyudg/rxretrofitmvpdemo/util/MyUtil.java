@@ -8,9 +8,9 @@ package cn.com.tianyudg.rxretrofitmvpdemo.util;
 
 public class MyUtil {
 
-    public static <T> T checkNotNull(T reference) {
+    public static <T> T checkNotNull(T reference,String msg) {
         if(reference == null) {
-            throw new NullPointerException();
+            throw new NullPointerException(msg);
         } else {
             return reference;
         }
