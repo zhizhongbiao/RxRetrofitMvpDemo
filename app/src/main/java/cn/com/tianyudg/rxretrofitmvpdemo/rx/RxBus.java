@@ -1,5 +1,6 @@
 package cn.com.tianyudg.rxretrofitmvpdemo.rx;
 
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import cn.com.tianyudg.rxretrofitmvpdemo.util.MyUtil;
@@ -88,7 +89,7 @@ public class RxBus {
 
 
     /**
-     * 这个会清掉所有的订阅者的订阅
+     * 这个会清掉对应订阅的所有的订阅者的订阅
      *
      * @param o
      */
@@ -103,5 +104,20 @@ public class RxBus {
         disposableMap.remove(key);
 
     }
+
+
+    public void unSubscribeAll() {
+        if (disposableMap == null) return;
+
+        for (Map.Entry<Object, CompositeDisposable> set : disposableMap.entrySet()) {
+            CompositeDisposable value = set.getValue();
+            if (value == null) continue;
+            value.clear();
+        }
+
+        disposableMap.clear();
+
+    }
+
 
 }
