@@ -1,13 +1,21 @@
 package cn.com.tianyudg.rxretrofitmvpdemo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import cn.com.tianyudg.rxretrofitmvpdemo.basic.view.BaseActivity;
+import cn.com.tianyudg.rxretrofitmvpdemo.view.MvpActivity;
+
+public class MainActivity extends MvpActivity<TestPresenter,TestModel> {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public int getViewLayout() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initView(Bundle savedInstanceState, ToolbarHolder tbHolder, Intent args) {
+
     }
 }

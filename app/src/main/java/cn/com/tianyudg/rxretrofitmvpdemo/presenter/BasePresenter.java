@@ -2,6 +2,8 @@ package cn.com.tianyudg.rxretrofitmvpdemo.presenter;
 
 import java.lang.ref.WeakReference;
 
+import cn.com.tianyudg.rxretrofitmvpdemo.basic.network.ResponseInfo;
+import cn.com.tianyudg.rxretrofitmvpdemo.basic.presenter.Callback;
 import cn.com.tianyudg.rxretrofitmvpdemo.model.IModel;
 import cn.com.tianyudg.rxretrofitmvpdemo.util.MyUtil;
 import cn.com.tianyudg.rxretrofitmvpdemo.view.IView;
@@ -12,7 +14,8 @@ import cn.com.tianyudg.rxretrofitmvpdemo.view.IView;
  * Desc :
  */
 
-public class BasePresenter<V extends IView, M extends IModel> implements IPresenter<V, M> {
+public class BasePresenter<V extends IView, M extends IModel>
+        implements IPresenter<V, M>,Callback{
 
     WeakReference<V> viewHolder;
     WeakReference<M> modelHolder;
@@ -64,5 +67,15 @@ public class BasePresenter<V extends IView, M extends IModel> implements IPresen
     @Override
     public boolean isModelAttach() {
         return modelHolder != null && modelHolder.get() != null;
+    }
+
+    @Override
+    public void onSuccess(ResponseInfo resoponseInfo) {
+        getView().stopLoading();
+    }
+
+    @Override
+    public void onError(ResponseInfo resoponseInfo) {
+        getView().stopLoading();
     }
 }
