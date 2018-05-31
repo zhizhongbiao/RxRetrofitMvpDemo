@@ -44,7 +44,7 @@ public class RxBus {
     /**
      * 发布事件
      *
-     * @param o
+     * @param o 事件对象
      */
     public void post(Object o) {
         subject.onNext(o);
@@ -53,14 +53,24 @@ public class RxBus {
     /**
      * 是否有人订阅
      *
-     * @return
+     * @return true 如果有人订阅，否则false
      */
     public boolean hasObservers() {
         return subject.hasObservers();
     }
 
 
+    /**
+     * 用该方法生成一个能发射事件的Observable对象，
+     * 只有该方法返回的Observable对象被订阅的时候，post(Object o)方法中
+     * 的subject.onNext(o);语句才真正被执行
+     *
+     * @param clz  事件类对象
+     * @param <T>  事件类型
+     * @return    能发射事件的Observable
+     */
     public <T> Observable<T> toObservable(Class<T> clz) {
+
         return subject.ofType(clz);
     }
 
