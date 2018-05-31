@@ -1,5 +1,6 @@
 package cn.com.tianyudg.rxretrofitmvpdemo.contracts;
 
+import cn.com.tianyudg.rxretrofitmvpdemo.model.IModel;
 import cn.com.tianyudg.rxretrofitmvpdemo.presenter.BasePresenter;
 
 /**
@@ -21,7 +22,7 @@ public interface TestContract {
 
     }
 
-    interface ITestModel
+    interface ITestModel extends IModel
     {
         void login(String account,String psw);
 
